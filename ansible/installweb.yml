@@ -1,0 +1,22 @@
+---
+- hosts: web
+  become: yes
+  tasks:
+    - name: 'Instalação de pacotes webserver'
+      become: yes
+      apt:
+        pkg:
+          - php7.4
+          - php-pear
+          - php7.4-curl
+          - php7.4-gd
+          - php7.4-intl
+          - php7.4-xmlrpc
+          - php7.4-mysql
+          - apache2
+          - python3-mysqldb
+          - wget
+          - zip
+          - curl
+          - vim
+      state: present   

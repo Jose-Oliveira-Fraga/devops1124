@@ -18,7 +18,7 @@
       file:
         path: /etc/apt/keyrings
         state: directory
-        mode: '0775'
+        mode: '0755'
 
     - name: Baixar chave GPG oficial do Docker
       get_url:
