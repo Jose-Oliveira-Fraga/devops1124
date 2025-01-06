@@ -1,16 +1,14 @@
 pipeline {
-	agent any
+    agent any
 
 	stages {
 	     stage('Executar playbook Ansible') {
 		steps {
-		ansiblePlaybook(
-		inventory: 'ansible/hosts',
-		playbook:'ansile/installweb.yml'
-	        	)
+		    ansiblePlaybook(
+			inventory:'ansible/hosts',
+			playbook:'ansible/installweb.yml'
+	             )
         	}
-		
-      }
-
-   }
+	  }
+     }
 }
